@@ -1,0 +1,43 @@
+<style type="text/css">
+  .ghContributors {
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+  }
+
+  .ghContributors > div {
+    width: 50%;
+    display: inline-flex;
+    margin-bottom: 5px;
+    align-items: center;
+  }
+  .ghContributors > div label {
+    padding-left: 8px;
+  }
+  .ghContributors > div span {
+    font-size: x-small;
+    padding-left: 8px;
+  }
+</style>
+<div class="ghContributors" data-url="{{ .Get 0 }}"></div>
+<script>
+;(function(){
+  try {
+    const containers = document.querySelectorAll('.ghContributors[data-url]')
+    containers.forEach(el => {
+      const url = el.getAttribute('data-url')
+      if (!url) return
+      fetch(url)
+        .then(res => res.json())
+        .then(list => {
+          list.forEach(u => {
+            const d = document.createElement('div')
+            d.innerHTML = `\n              <img src="${u.avatar_url}" width="32" height="32" style="margin-bottom:0.25em;vertical-align:middle" />\n              <label><a href="${u.html_url}">@${u.login}</a></label>\n              <span class="contributions">${u.contributions} commits</span>\n            `
+            el.appendChild(d)
+          })
+        })
+        .catch(err => { console.error('ghcontributors fetch error:', err) })
+    })
+  } catch (e) { console.error(e) }
+})()
+</script>
