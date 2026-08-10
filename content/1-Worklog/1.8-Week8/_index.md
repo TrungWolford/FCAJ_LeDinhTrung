@@ -1,53 +1,58 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2024-02-19
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand AWS messaging services: SQS, SNS, and SES.
+* Learn about decoupled application architectures.
+* Master queue-based processing and event-driven designs.
+* Explore pub/sub patterns and message filtering.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | End Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1   | - Learn SQS fundamentals (Standard vs FIFO) <br> - Understand message visibility timeout <br> - Explore queue attributes and permissions | 30/07/2026 | 30/07/2026 | AWS SQS User Guide |
+| 2   | - Create and configure SQS queues <br> - Send and receive messages using SDK <br> - Implement message processing workers | 31/07/2026 | 31/07/2026 | AWS SQS Configuration |
+| 3   | - Learn SNS fundamentals and pub/sub pattern <br> - Create SNS topics and subscriptions <br> - Configure message filtering | 01/08/2026 | 01/08/2026 | AWS SNS User Guide |
+| 4-5 | - Integrate SNS with SQS for fan-out pattern <br> - Set up email notifications using SES <br> - Build event-driven application | 02/08/2026 | 03/08/2026 | AWS Messaging Patterns |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Gained comprehensive understanding of AWS messaging services for building decoupled applications.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned about SQS Standard queues for high throughput and SQS FIFO for ordering guarantees.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Successfully created SQS queues with appropriate configurations for different use cases.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Implemented message visibility timeout to handle processing failures gracefully.
 
-* Used AWS CLI to perform basic operations such as:
+* Built message processing workers to consume and process messages from SQS queues.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
+* Learned about SNS as a fully managed pub/sub messaging service.
+
+* Created SNS topics and configured multiple subscription types (SQS, Lambda, HTTP, email).
+
+* Implemented message filtering to route specific messages to appropriate subscribers.
+
+* Set up the SNS-to-SQS fan-out pattern for reliable message distribution.
+
+* Configured Amazon SES for sending transactional emails.
+
+* Built event-driven applications using SNS and SQS together.
+
+* Implemented dead-letter queues for handling failed messages.
+
+* Understood message ordering and delivery guarantees across messaging services.
+
+* Monitored queue metrics and configured alarms for operational visibility.
+
+* Created scalable, decoupled application architectures using messaging services.
   * View EC2 service
   * Create and manage key pairs
   * Check information about running services

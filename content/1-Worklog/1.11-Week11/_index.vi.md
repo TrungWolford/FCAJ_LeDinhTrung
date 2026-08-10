@@ -1,16 +1,35 @@
 ---
 title: "Worklog Tuần 11"
-date: 2024-01-01
-weight: 2
+date: 2024-03-11
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
+
+* Tìm hiểu AWS DynamoDB cho NoSQL databases.
+* Overstend DynamoDB design patterns và optimization.
+* Xây dựng real-time applications với DynamoDB Streams.
+* Hiểu pricing và capacity planning.
+
+### Kết quả đạt được tuần 11:
+
+* Hiểu được DynamoDB là dịch vụ fully managed NoSQL database.
+* Tìm hiểu được DynamoDB data model với partition keys và sort keys.
+* Tạo DynamoDB tables với optimal partition key design.
+* Cấu hình Global Secondary Indexes (GSI) và Local Secondary Indexes (LSI).
+* Bật point-in-time recovery và backup cho data protection.
+* Bật DynamoDB Streams cho capturing item-level modifications.
+* Thực hiện single-item và batch read/write operations.
+* Triển khai transactional reads và writes cho ACID compliance.
+* Sử dụng Query và Scan operations với appropriate filtering.
+* Tối ưu hóa queries bằng leveraging indexes.
+* Cấu hình Time-To-Live (TTL) cho automatic item expiration.
+* Xây dựng real-time applications sử dụng DynamoDB Streams.
+* Chuyển đổi giữa provisioned và on-demand capacity modes.
+* Triển khai cost optimization strategies.
+* Giám sát DynamoDB metrics sử dụng CloudWatch.
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.

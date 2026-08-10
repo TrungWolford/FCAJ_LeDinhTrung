@@ -1,57 +1,34 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-29
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Account Setup & Security:** Create and securely configure an AWS Free Tier account.
+* **Credit Activation:** Claim and apply $200 AWS credit to support learning activities.
+* **Console Familiarization:** Learn and navigate the AWS Management Console effectively.
+* **Cost Controls:** Configure AWS Budgets to prevent unexpected costs.
+* **Support Request Practice:** Learn how to create and manage support cases in AWS.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | End Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Register an AWS Free Tier account <br> - Configure multi-factor authentication (MFA) on the root account and create an IAM Admin user | 29/06/2026 | 29/06/2026 | AWS Account Creation Guide |
+| 2 | - Submit requesting materials to claim the $200 AWS credit for the FCAJ internship program | 30/06/2026 | 30/06/2026 | FCAJ Program Guidelines |
+| 3 | - Explore AWS Management Console layout, search functionality, and global/regional services behavior | 01/07/2026 | 01/07/2026 | AWS Console User Guide |
+| 4 | - Learn and configure AWS Budgets <br> - Set up a Cost Budget and a Usage Budget with threshold alerts | 02/07/2026 | 02/07/2026 | AWS Budgets Documentation |
+| 5 | - Set up Reserved Instances Budget and Savings Plans Budget for cost monitoring practices | 03/07/2026 | 03/07/2026 | AWS Billing & Budgets |
+| 6 | - Explore AWS Support Center <br> - Practice creating, tracking, and resolving a simulated support case | 04/07/2026 | 04/07/2026 | AWS Support User Guide |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **AWS Free Tier Activated:** Successfully created a new AWS Free Tier account. Secured the root account by enabling virtual MFA via mobile authenticator and created a dedicated IAM administrator user for daily operations.
+* **Credits Claimed:** Obtained and applied $200 AWS credit to the billing dashboard, ensuring sufficient budget coverage for intermediate labs without incurring personal charges.
+* **Console Mastery:** Mastered navigation inside the AWS Management Console, including region selection rules and resource pinning.
+* **Proactive Billing Alerts:** Configured 4 essential budgets (Cost, Usage, RI, and Savings Plans Budgets) with email notifications triggering at 80% and 100% of defined thresholds.
+* **AWS Support Process:** Acquired hands-on knowledge on how to open support requests, escalate issues, and communicate with AWS engineers for technical assistance and service limit increases.

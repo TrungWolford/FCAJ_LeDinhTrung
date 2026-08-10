@@ -1,16 +1,42 @@
 ---
 title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+date: 2024-02-19
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 8:
+
+* Hiểu AWS messaging services: SQS, SNS, và SES.
+* Tìm hiểu về các kiến trúc ứng dụng decoupled.
+* Overstend xử lý dựa trên queue và các thiết kế event-driven.
+* Khám phá các mô hình pub/sub và message filtering.
+
+### Các công việc cần triển khai trong tuần này:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1   | - Tìm hiểu SQS fundamentals (Standard vs FIFO) <br> - Hiểu message visibility timeout <br> - Khám phá queue attributes và permissions | 30/07/2026 | 30/07/2026 | AWS SQS User Guide |
+| 2   | - Tạo và cấu hình SQS queues <br> - Gửi và nhận messages sử dụng SDK <br> - Triển khai message processing workers | 31/07/2026 | 31/07/2026 | AWS SQS Configuration |
+| 3   | - Tìm hiểu SNS fundamentals và pub/sub pattern <br> - Tạo SNS topics và subscriptions <br> - Cấu hình message filtering | 01/08/2026 | 01/08/2026 | AWS SNS User Guide |
+| 4-5 | - Tích hợp SNS với SQS cho fan-out pattern <br> - Thiết lập email notifications sử dụng SES <br> - Xây dựng event-driven application | 02/08/2026 | 03/08/2026 | AWS Messaging Patterns |
+
+### Kết quả đạt được tuần 8:
+
+* Hiểu được AWS messaging services cho việc xây dựng các ứng dụng decoupled.
+* Tìm hiểu được SQS Standard queues và SQS FIFO.
+* Tạo thành công SQS queues với các cấu hình phù hợp.
+* Triển khai message visibility timeout để xử lý lỗi.
+* Xây dựng các message processing workers để tiêu thụ messages.
+* Tìm hiểu được SNS là dịch vụ pub/sub messaging được quản lý.
+* Tạo SNS topics và cấu hình nhiều loại subscriptions.
+* Triển khai message filtering để định tuyến messages.
+* Thiết lập mô hình fan-out SNS-to-SQS.
+* Cấu hình Amazon SES để gửi transactional emails.
+* Xây dựng các ứng dụng event-driven sử dụng SNS và SQS.
+* Triển khai dead-letter queues để xử lý messages bị lỗi.
+* Tạo các kiến trúc ứng dụng có khả năng mở rộng, decoupled.
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.

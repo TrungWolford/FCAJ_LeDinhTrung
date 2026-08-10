@@ -1,16 +1,40 @@
 ---
 title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+date: 2024-02-12
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 7:
+
+* Hiểu Elastic Load Balancing và Auto Scaling cho high availability.
+* Tìm hiểu về Application Load Balancer (ALB), Network Load Balancer (NLB), và Classic Load Balancer.
+* Overstend EC2 Auto Scaling groups và scaling policies.
+* Triển khai các kiến trúc ứng dụng có fault-tolerant và có khả năng mở rộng.
+
+### Các công việc cần triển khai trong tuần này:
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1   | - Tìm hiểu Load Balancing fundamentals <br> - Hiểu ALB, NLB, và CLB khác biệt <br> - Khám phá health checks và routing | 23/07/2026 | 23/07/2026 | AWS Load Balancing User Guide |
+| 2   | - Tạo Application Load Balancer <br> - Cấu hình target groups và listeners <br> - Thiết lập SSL/TLS certificates | 24/07/2026 | 24/07/2026 | AWS ALB Configuration |
+| 3   | - Tìm hiểu Auto Scaling fundamentals <br> - Tạo launch templates và Auto Scaling groups <br> - Cấu hình scaling policies | 25/07/2026 | 25/07/2026 | AWS Auto Scaling Guide |
+| 4-5 | - Thiết lập dynamic scaling policies (target tracking, step scaling) <br> - Tạo multi-AZ deployments <br> - Kiểm tra scaling và failover scenarios | 26/07/2026 | 27/07/2026 | AWS Scaling Best Practices |
+
+### Kết quả đạt được tuần 7:
+
+* Hiểu được Elastic Load Balancing và vai trò của nó trong phân phối lưu lượng truy cập.
+* Tìm hiểu được các loại load balancer khác nhau và hiệu suất cao.
+* Tạo thành công các Application Load Balancers với nhiều target groups.
+* Cấu hình health checks để giám sát sức khỏe instance backend.
+* Thiết lập SSL/TLS certificates cho giao tiếp HTTPS an toàn.
+* Tạo launch templates với các cấu hình phù hợp cho khởi chạy instance nhất quán.
+* Tạo EC2 Auto Scaling groups trên nhiều Availability Zones.
+* Cấu hình target tracking scaling policies, step scaling policies.
+* Kiểm tra các kịch bản scaling và failover scenarios.
+* Triển khai các kiến trúc ứng dụng multi-tier với load balancing.
+* Đạt được high availability và fault tolerance trong triển khai ứng dụng.
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.

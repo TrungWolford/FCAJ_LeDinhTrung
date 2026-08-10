@@ -1,16 +1,35 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2024-02-26
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
+
+* Overstend CloudWatch cho monitoring và observability.
+* Tìm hiểu về CloudWatch metrics, logs, và alarms.
+* Hiểu kiểm tra hiệu suất ứng dụng và khắc phục sự cố.
+* Khám phá X-Ray cho distributed tracing và service mapping.
+
+### Kết quả đạt được tuần 9:
+
+* Hiểu được CloudWatch là dịch vụ monitoring và observability.
+* Tìm hiểu được CloudWatch namespace, dimensions, và metrics.
+* Tạo custom metrics để theo dõi chỉ số hiệu suất ứng dụng.
+* Xây dựng CloudWatch dashboards cho monitoring thời gian thực.
+* Cấu hình CloudWatch Logs cho centralized log collection.
+* Tạo Log Groups và Log Streams cho tổ chức logs ứng dụng.
+* Sử dụng CloudWatch Logs Insights để query và analyze log data.
+* Tạo metric filters để extract metrics từ log data.
+* Tạo CloudWatch Alarms dựa trên metrics để automated alerting.
+* Cấu hình SNS notifications cho alarm events.
+* Kiểm tra alarm scenarios và verified notification delivery.
+* Cấu hình AWS X-Ray cho distributed tracing.
+* Phân tích service maps để hiểu ứng dụng dependencies.
+* Khắc phục sự cố ứng dụng sử dụng X-Ray traces.
+* Thiết lập comprehensive monitoring và alerting cho production.
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.

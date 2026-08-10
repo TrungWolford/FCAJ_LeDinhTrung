@@ -1,57 +1,33 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-07-27
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Generative AI Integration:** Connect the C# backend to Amazon Bedrock (Claude AI) to dynamically generate and evolve RPG storylines based on player interactions.
+* **Performance Optimization:** Address the Unity client freeze UI lag caused by AWS Lambda cold starts.
+* **Native AOT & SnapStart:** Implement Native AOT compilation for light endpoints and AWS Lambda SnapStart for compute-heavy APIs.
+* **Professional Development:** Participate in the Agent Force - Deepdive event to gain cutting-edge agentic workflow insights.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | End Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Integrate the Amazon Bedrock SDK inside the C# Backend <br> - Code prompts instructing Claude AI to manage player branching story paths | 27/07/2026 | 27/07/2026 | Amazon Bedrock User Guide |
+| 2 | - Connect user options to Bedrock API requests <br> - Parse JSON narrative responses back to the Unity UI | 28/07/2026 | 28/07/2026 | Claude Prompt Engineering |
+| 3 | - Analyze Unity logs and CloudWatch logs to diagnose Lambda cold start durations causing client UI freezing | 29/07/2026 | 29/07/2026 | CloudWatch Logs Insights |
+| 4 | - Apply Native AOT compiling to lightweight endpoints (Get Profile, Inventory Check) <br> - Test response latency | 30/07/2026 | 30/07/2026 | .NET Native AOT compilation |
+| 5 | - Configure AWS Lambda SnapStart for complex logic APIs (Battle Logic, Bedrock narrative API) to reduce startup latency | 31/07/2026 | 31/07/2026 | AWS Lambda SnapStart Guide |
+| 6 | - Attend the Agent Force - Deepdive event <br> - Participate in workshops demonstrating agentic AI solutions | 01/08/2026 | 01/08/2026 | Agent Force Event Program |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Dynamic AI Storyteller:** Successfully connected the backend to Amazon Bedrock (Claude model). The game now generates personalized narratives and quest lines based on choices, parsing them back to Unity dynamically.
+* **Cold Starts Diagnosed:** Identified that the .NET Runtime initialization overhead was causing up to 3-5 seconds of cold start latency, resulting in temporary UI freezes on the Unity Client.
+* **Native AOT Latency Reduction:** Compiled lightweight read APIs (Get Profile, Inventory Check) using Native AOT. This reduced cold start times dramatically to a mere 20-50ms range, keeping client requests extremely fast.
+* **SnapStart Deployment:** Activated AWS Lambda SnapStart for compute-intensive write APIs and AI calls. This optimizes initialization speed by utilizing execution environment snapshots, preserving fast response times without additional provisioning costs.
+* **Industry Insights:** Attended the Agent Force - Deepdive event, gathering insights on autonomous agents, multi-agent frameworks, and design architectures for advanced cloud integrations.

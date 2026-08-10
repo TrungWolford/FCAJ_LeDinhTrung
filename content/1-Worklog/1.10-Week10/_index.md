@@ -1,21 +1,59 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2024-03-04
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand AWS Lambda and serverless computing.
+* Learn about Lambda functions, triggers, and event sources.
+* Master API Gateway for building RESTful APIs.
+* Build serverless applications without managing servers.
 
 ### Tasks to be carried out this week:
+
+| Day | Task | Start Date | End Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1   | - Learn Lambda fundamentals and execution model <br> - Understand Lambda runtime and layers <br> - Explore Lambda permissions and IAM roles | 13/08/2026 | 13/08/2026 | AWS Lambda User Guide |
+| 2   | - Create Lambda functions in Python/Node.js <br> - Configure environment variables and packages <br> - Test Lambda functions locally and in console | 14/08/2026 | 14/08/2026 | AWS Lambda Development |
+| 3   | - Learn API Gateway fundamentals <br> - Create REST APIs and resource mappings <br> - Configure lambda integrations | 15/08/2026 | 15/08/2026 | AWS API Gateway |
+| 4-5 | - Build complete serverless application <br> - Set up Lambda with various event sources (S3, DynamoDB) <br> - Deploy and monitor serverless applications | 16/08/2026 | 17/08/2026 | AWS Serverless Architecture |
+
+### Week 10 Achievements:
+
+* Gained comprehensive knowledge of AWS Lambda and serverless computing paradigm.
+
+* Created Lambda functions in multiple languages and runtimes.
+
+* Configured Lambda environment variables, layers, and dependencies.
+
+* Set up Lambda execution roles with appropriate IAM permissions.
+
+* Tested Lambda functions using Lambda Console and AWS SAM CLI.
+
+* Created Lambda functions triggered by various event sources (S3, SNS, SQS, API Gateway).
+
+* Understood Lambda concurrency and reserved concurrency settings.
+
+* Learned API Gateway for building, deploying, and managing APIs.
+
+* Created REST APIs with multiple resources and methods.
+
+* Configured Lambda proxy integration with API Gateway.
+
+* Set up request/response mapping and transformation.
+
+* Deployed complete serverless applications combining Lambda and API Gateway.
+
+* Configured Lambda to read from and write to DynamoDB tables.
+
+* Set up automated deployments using SAM and CloudFormation.
+
+* Monitored serverless application performance using CloudWatch.
+
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
 | 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |

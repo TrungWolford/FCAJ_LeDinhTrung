@@ -1,57 +1,33 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-07-13
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* **Infrastructure as Code (IaC):** Use AWS CDK in C# (.NET 8) to define and deploy cloud infrastructure (API Gateway, AWS Lambda, DynamoDB, Amazon Cognito).
+* **Shared Library Architecture:** Build a shared .NET Standard 2.1 library (`GameShared.dll`) containing data models and DTOs, and configure automation to synchronize it with the Unity Client.
+* **Authentication System:** Implement registrations and logins with Amazon Cognito using Email OTP verification.
+* **Session Management:** Develop a Silent Login API leveraging Cognito Refresh Tokens to keep players logged in seamlessly.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | End Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Initialize AWS CDK project using C# and .NET 8 <br> - Define DynamoDB tables and Cognito User Pools structures | 13/07/2026 | 13/07/2026 | AWS CDK C# Developer Guide |
+| 2 | - Code CDK stacks for API Gateway integrations and AWS Lambda handler environments | 14/07/2026 | 14/07/2026 | API Gateway CDK Reference |
+| 3 | - Create the `GameShared` class library project (.NET Standard 2.1) <br> - Code mutual DTOs and item schemas | 15/07/2026 | 15/07/2026 | Microsoft .NET Class Library |
+| 4 | - Write the MSBuild PostBuild Event script in the backend project file to copy `GameShared.dll` to Unity client directories | 16/07/2026 | 16/07/2026 | MSBuild Reference |
+| 5 | - Integrate Amazon Cognito SDK into C# Lambda <br> - Implement sign-up, sign-in, and Email OTP validation logic | 17/07/2026 | 17/07/2026 | Cognito Identity Provider SDK |
+| 6 | - Develop backend API handlers for Silent Login using Refresh Token rotation <br> - Test the flow with Unity mock client | 18/07/2026 | 18/07/2026 | JWT & Token Validation Guide |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **IaC Automations Implemented:** Successfully automated the deployment of the entire cloud stack using AWS CDK in C#. Infrastructure is now defined as C# code, reducing manual environment setup discrepancies.
+* **Type Mismatch Solved:** Set up the `GameShared.dll` shared library. Implemented MSBuild compilation hooks to automatically copy built binaries to the Unity Client folder, resolving data model synchronization errors between backend and frontend.
+* **Secure Authentication Flow:** Created an Amazon Cognito User Pool with custom workflows. Users can securely register and authenticate through AWS Cognito, generating valid JWT Access, ID, and Refresh tokens.
+* **Cost-Efficient Verification:** Leveraged AWS Cognito's built-in email OTP verification to manage identity validation without requiring paid external SMS or telephony gateways.
+* **Seamless Player Experience:** Developed a robust Silent Login REST API. The Unity Client can now restore active player sessions automatically in the background using Refresh Tokens, removing the need for credentials entry on every game launch.

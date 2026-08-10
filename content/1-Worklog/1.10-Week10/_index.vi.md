@@ -1,16 +1,35 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2024-03-04
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
+
+* Hiểu AWS Lambda và serverless computing.
+* Tìm hiểu về Lambda functions, triggers, và event sources.
+* Overstend API Gateway cho xây dựng RESTful APIs.
+* Xây dựng serverless applications mà không cần quản lý servers.
+
+### Kết quả đạt được tuần 10:
+
+* Hiểu được AWS Lambda và serverless computing paradigm.
+* Tạo Lambda functions trong Python/Node.js.
+* Cấu hình Lambda environment variables, layers, và dependencies.
+* Thiết lập Lambda execution roles với appropriate IAM permissions.
+* Kiểm tra Lambda functions sử dụng Lambda Console và AWS SAM CLI.
+* Tạo Lambda functions triggered bởi các event sources khác nhau.
+* Hiểu Lambda concurrency và reserved concurrency settings.
+* Tìm hiểu API Gateway cho xây dựng, triển khai, và quản lý APIs.
+* Tạo REST APIs với nhiều resources và methods.
+* Cấu hình Lambda proxy integration với API Gateway.
+* Thiết lập request/response mapping và transformation.
+* Triển khai complete serverless applications.
+* Cấu hình Lambda để đọc từ và ghi vào DynamoDB tables.
+* Thiết lập automated deployments sử dụng SAM và CloudFormation.
+* Giám sát serverless application performance sử dụng CloudWatch.
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.

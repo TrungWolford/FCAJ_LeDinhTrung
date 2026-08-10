@@ -1,15 +1,36 @@
 ---
 title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+date: 2024-03-18
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 ### Mục tiêu tuần 12:
+
+* Ôn tập tất cả các khái niệm AWS học được trong 12 tuần.
+* Thiết kế và triển khai một project comprehensive sử dụng nhiều AWS services.
+* Trình bày kết quả và thể hiện kỹ năng AWS thực tế.
+* Chuẩn bị cho AWS certification preparation.
+
+### Kết quả đạt được tuần 12:
+
+* Hoàn thành ôn tập toàn diện về tất cả AWS services.
+* Thể hiện proficiency trong EC2 instance management và Auto Scaling.
+* Chứng minh expertise trong S3 storage, lifecycle policies.
+* Chứng minh competency với RDS database management.
+* Thể hiện VPC networking skills.
+* Thể hiện hiểu biết về IAM security best practices.
+* Triển khai load balancing và auto-scaling.
+* Thiết kế và triển khai messaging architectures.
+* Thiết lập comprehensive monitoring sử dụng CloudWatch.
+* Xây dựng serverless applications sử dụng Lambda.
+* Thiết kế và tối ưu hóa DynamoDB databases.
+* Tạo một production-grade multi-tier application architecture.
+* Ghi chép các quyết định kiến trúc và chi tiết triển khai.
+* Triển khai và kiểm tra complete application.
+* Trình bày technical findings và thể hiện AWS skills.
+* Chuẩn bị cho AWS Solutions Architect Associate certification.
 
 * Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
 * Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
