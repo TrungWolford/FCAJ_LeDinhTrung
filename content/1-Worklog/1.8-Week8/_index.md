@@ -1,62 +1,28 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-02-19
+date: 2026-08-09
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
 ### Week 8 Objectives:
+- Perform complete End-to-End integration testing covering Unity Client and AWS Backend services.
+- Evaluate backend infrastructure against the design pillars of the AWS Well-Architected Framework.
+- Package source code, polish the internship report, and write deployment documentation.
 
-* Understand AWS messaging services: SQS, SNS, and SES.
-* Learn about decoupled application architectures.
-* Master queue-based processing and event-driven designs.
-* Explore pub/sub patterns and message filtering.
-
-### Tasks to be carried out this week:
+### Tasks Carried Out:
 
 | Day | Task | Start Date | End Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1   | - Learn SQS fundamentals (Standard vs FIFO) <br> - Understand message visibility timeout <br> - Explore queue attributes and permissions | 30/07/2026 | 30/07/2026 | AWS SQS User Guide |
-| 2   | - Create and configure SQS queues <br> - Send and receive messages using SDK <br> - Implement message processing workers | 31/07/2026 | 31/07/2026 | AWS SQS Configuration |
-| 3   | - Learn SNS fundamentals and pub/sub pattern <br> - Create SNS topics and subscriptions <br> - Configure message filtering | 01/08/2026 | 01/08/2026 | AWS SNS User Guide |
-| 4-5 | - Integrate SNS with SQS for fan-out pattern <br> - Set up email notifications using SES <br> - Build event-driven application | 02/08/2026 | 03/08/2026 | AWS Messaging Patterns |
+| Mon | Validate identity flows: sign up, OTP activation, sign in, and token authentication | 09/08/2026 | 09/08/2026 | Test Case - Auth Flow |
+| Tue | Test AI Storyteller loops: character creation, plot generation, and player choice pathing | 10/08/2026 | 10/08/2026 | Test Case - AI Storyteller |
+| Wed | Test item inventory and combat systems: loot drops, equipment swaps, and turn-based battle resolution | 11/08/2026 | 11/08/2026 | Test Case - RPG Mechanics |
+| Thu | Conduct performance tuning, resolve errors, and measure architecture metrics against the AWS Well-Architected Framework | 12/08/2026 | 12/08/2026 | AWS Well-Architected Tool |
+| Fri | Compile project metrics, write, and format the final internship report on Hugo site | 13/08/2026 | 14/08/2026 | Writing Guidelines |
+| Sat | Archive monorepo source code, complete the deployment README.md, and hand over the project | 15/08/2026 | 15/08/2026 | GitHub Repository Handover |
 
-### Week 8 Achievements:
-
-* Gained comprehensive understanding of AWS messaging services for building decoupled applications.
-
-* Learned about SQS Standard queues for high throughput and SQS FIFO for ordering guarantees.
-
-* Successfully created SQS queues with appropriate configurations for different use cases.
-
-* Implemented message visibility timeout to handle processing failures gracefully.
-
-* Built message processing workers to consume and process messages from SQS queues.
-
-* Learned about SNS as a fully managed pub/sub messaging service.
-
-* Created SNS topics and configured multiple subscription types (SQS, Lambda, HTTP, email).
-
-* Implemented message filtering to route specific messages to appropriate subscribers.
-
-* Set up the SNS-to-SQS fan-out pattern for reliable message distribution.
-
-* Configured Amazon SES for sending transactional emails.
-
-* Built event-driven applications using SNS and SQS together.
-
-* Implemented dead-letter queues for handling failed messages.
-
-* Understood message ordering and delivery guarantees across messaging services.
-
-* Monitored queue metrics and configured alarms for operational visibility.
-
-* Created scalable, decoupled application architectures using messaging services.
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Achievements:
+- Verified end-to-end user journeys from registration to final boss combat. Game Client coordinates cleanly with Serverless APIs.
+- Reviewed and aligned the system architecture with Security, Reliability, Performance Efficiency, and Cost Optimization pillars.
+- Compiled final documentation and organized the code repository for smooth deployment and assessment.

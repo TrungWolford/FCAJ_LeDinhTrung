@@ -7,27 +7,22 @@ pre: " <b> 1.4. </b> "
 ---
 
 ### Week 4 Objectives:
+- Integrate Amazon Bedrock generative AI services to power the dynamic AI Storyteller system.
+- Develop a modular `PromptBuilder` combining character profile, active inventory, and story histories.
+- Design strict JSON response schemas for the AI models and code parser utilities on C# backend.
 
-* **Infrastructure as Code (IaC):** Use AWS CDK in C# (.NET 8) to define and deploy cloud infrastructure (API Gateway, AWS Lambda, DynamoDB, Amazon Cognito).
-* **Shared Library Architecture:** Build a shared .NET Standard 2.1 library (`GameShared.dll`) containing data models and DTOs, and configure automation to synchronize it with the Unity Client.
-* **Authentication System:** Implement registrations and logins with Amazon Cognito using Email OTP verification.
-* **Session Management:** Develop a Silent Login API leveraging Cognito Refresh Tokens to keep players logged in seamlessly.
-
-### Tasks to be carried out this week:
+### Tasks Carried Out:
 
 | Day | Task | Start Date | End Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Initialize AWS CDK project using C# and .NET 8 <br> - Define DynamoDB tables and Cognito User Pools structures | 13/07/2026 | 13/07/2026 | AWS CDK C# Developer Guide |
-| 2 | - Code CDK stacks for API Gateway integrations and AWS Lambda handler environments | 14/07/2026 | 14/07/2026 | API Gateway CDK Reference |
-| 3 | - Create the `GameShared` class library project (.NET Standard 2.1) <br> - Code mutual DTOs and item schemas | 15/07/2026 | 15/07/2026 | Microsoft .NET Class Library |
-| 4 | - Write the MSBuild PostBuild Event script in the backend project file to copy `GameShared.dll` to Unity client directories | 16/07/2026 | 16/07/2026 | MSBuild Reference |
-| 5 | - Integrate Amazon Cognito SDK into C# Lambda <br> - Implement sign-up, sign-in, and Email OTP validation logic | 17/07/2026 | 17/07/2026 | Cognito Identity Provider SDK |
-| 6 | - Develop backend API handlers for Silent Login using Refresh Token rotation <br> - Test the flow with Unity mock client | 18/07/2026 | 18/07/2026 | JWT & Token Validation Guide |
+| Mon | Request and enable access to LLM models (Amazon Nova / Anthropic Claude) via Amazon Bedrock Console | 13/07/2026 | 13/07/2026 | Amazon Bedrock User Guide |
+| Tue | Establish connectivity using C# AWS SDK Bedrock Runtime client and invoke models | 14/07/2026 | 14/07/2026 | AWS SDK for .NET - Bedrock |
+| Wed | Write PromptBuilder logic compiling character metadata and previous action contexts into prompt payloads | 15/07/2026 | 15/07/2026 | Prompt Engineering Guide |
+| Thu | Design structured JSON instructions to enforce AI outputs containing story narration, choices, and boss stats | 16/07/2026 | 16/07/2026 | Bedrock JSON Schema Setup |
+| Fri | Code the JSON Parser to map raw model responses to backend C# DTOs safely | 17/07/2026 | 17/07/2026 | C# System.Text.Json Guide |
+| Sat | Conduct integration testing on Bedrock invocations to measure latency, cost, and parsing reliability | 18/07/2026 | 18/07/2026 | Bedrock API Reference |
 
-### Week 4 Achievements:
-
-* **IaC Automations Implemented:** Successfully automated the deployment of the entire cloud stack using AWS CDK in C#. Infrastructure is now defined as C# code, reducing manual environment setup discrepancies.
-* **Type Mismatch Solved:** Set up the `GameShared.dll` shared library. Implemented MSBuild compilation hooks to automatically copy built binaries to the Unity Client folder, resolving data model synchronization errors between backend and frontend.
-* **Secure Authentication Flow:** Created an Amazon Cognito User Pool with custom workflows. Users can securely register and authenticate through AWS Cognito, generating valid JWT Access, ID, and Refresh tokens.
-* **Cost-Efficient Verification:** Leveraged AWS Cognito's built-in email OTP verification to manage identity validation without requiring paid external SMS or telephony gateways.
-* **Seamless Player Experience:** Developed a robust Silent Login REST API. The Unity Client can now restore active player sessions automatically in the background using Refresh Tokens, removing the need for credentials entry on every game launch.
+### Achievements:
+- Successfully integrated .NET backend with Amazon Bedrock API using `amazon.nova-pro-v1:0` model.
+- Completed a dynamic prompt generator engine injecting current player stats, items, and choices.
+- Solved model output parsing by leveraging strict system guidelines, returning structured JSON containing narrative descriptions, choice nodes, and combat statistics.

@@ -7,28 +7,24 @@ pre: " <b> 1.3. </b> "
 ---
 
 ### Week 3 Objectives:
+- Integrate secure user authentication using Amazon Cognito User Pools.
+- Develop C# backend APIs for user Registration, Confirmation, Login, and Token Refresh, connecting them to Unity Client UI.
+- Design a scalable game database schema for User profiles, Characters, Inventories, StorySessions, and Battles.
+- Initialize Amazon DynamoDB tables and write C# Repository classes to access and persist game states.
 
-* **S3 Static Hosting:** Learn object storage design, public access permissions, and deploy a static website hosted on Amazon S3.
-* **Relational Database (RDS):** Initialize, configure, and connect to relational database instances (MySQL/PostgreSQL) managed by Amazon RDS.
-* **NoSQL Database (DynamoDB):** Explore NoSQL schema structures, primary keys (Partition Key and Sort Key), and run basic CRUD actions on Amazon DynamoDB.
-* **System Monitoring (CloudWatch):** Configure metrics collection, set up custom alerts (Alarms), and monitor logs in Amazon CloudWatch.
-* **Command Line Operations (AWS CLI):** Install, securely configure credentials, and run administration commands directly via terminal.
-
-### Tasks to be carried out this week:
+### Tasks Carried Out:
 
 | Day | Task | Start Date | End Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Create S3 bucket, configure bucket policy and CORS settings <br> - Deploy static HTML/CSS files for website hosting | 06/07/2026 | 06/07/2026 | Amazon S3 Static Hosting Guide |
-| 2 | - Launch an Amazon RDS instance (MySQL or PostgreSQL) <br> - Set up a VPC security group and verify connectivity via DBeaver/pgAdmin | 07/07/2026 | 07/07/2026 | Amazon RDS User Guide |
-| 3 | - Create a DynamoDB table with defined Partition Key and Sort Key <br> - Perform CRUD operations via AWS Console and programmatically | 08/07/2026 | 08/07/2026 | Amazon DynamoDB Developer Guide |
-| 4 | - Explore CloudWatch metrics dashboard <br> - Set up an alarm to trigger an SNS email alert when an RDS metric exceeds limit | 09/07/2026 | 09/07/2026 | Amazon CloudWatch User Guide |
-| 5 | - Install AWS CLI on local workspace <br> - Configure AWS credentials using `aws configure` with IAM access keys | 10/07/2026 | 10/07/2026 | AWS CLI Getting Started |
-| 6 | - Write CLI scripts to manage S3 buckets, RDS status, and query DynamoDB data from command prompt | 11/07/2026 | 11/07/2026 | AWS CLI Command Reference |
+| Mon | Create Cognito User Pools, App Clients, and configure user schema attributes | 06/07/2026 | 06/07/2026 | AWS Cognito Developer Guide |
+| Tue | Write Backend C# logic for authentication APIs (Register, Confirm, Login, Refresh) | 07/07/2026 | 07/07/2026 | AWS SDK for .NET - Cognito |
+| Wed | Design basic login/signup UI in Unity, handling JWT storage and automatic session refresh | 08/07/2026 | 08/07/2026 | Unity WebRequest & Auth |
+| Thu | Model database entities: User, Character, Inventory, StorySession, Battle | 09/07/2026 | 09/07/2026 | DynamoDB Modeling Best Practices |
+| Fri | Provision DynamoDB tables, defining Partition Keys, Sort Keys, and Global Secondary Indexes (GSIs) | 10/07/2026 | 10/07/2026 | Amazon DynamoDB Developer Guide |
+| Sat | Write C# Repository classes using AWS SDK .NET to read/write real-time game data | 11/07/2026 | 11/07/2026 | AWS SDK for .NET - DynamoDB |
 
-### Week 3 Achievements:
-
-* **Static Site Deployed:** Successfully deployed a fully functional static website hosted directly on Amazon S3. Understood S3 permissions, including disabling Block Public Access and adding custom Read-Only bucket policies.
-* **RDS Connection Established:** Provisioned a cloud-managed PostgreSQL database. Mastered secure access setup using Security Group inbound rules to restrict connection access to my local IP.
-* **NoSQL Experience:** Understood the fundamentals of NoSQL architectures compared to relational structures. Created DynamoDB tables, set up primary keys, and performed efficient CRUD operations.
-* **Resource Monitoring:** Set up operational monitoring. Configured CloudWatch Alarms to track resource usage and automatically send alerts, improving system visibility.
-* **Command Line Proficiency:** Standardized developer workflow by shifting from manual console operations to terminal-based automation using AWS CLI commands (`aws s3 cp`, `aws rds describe-db-instances`, etc.).
+### Achievements:
+- Configured a fully functional user directory via Amazon Cognito with email verification flow.
+- Successfully built Unity Client forms that authenticate securely and retain Bearer JWT tokens.
+- Structured DynamoDB schemas with Partition Keys and Sort Keys ensuring fast query latency.
+- Implemented C# data access layer (Repository) executing atomic updates and conditional queries on DynamoDB.

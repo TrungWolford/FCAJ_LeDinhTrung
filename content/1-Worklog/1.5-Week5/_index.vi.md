@@ -7,27 +7,22 @@ pre: " <b> 1.5. </b> "
 ---
 
 ### Mục tiêu tuần 5:
+- Tách biệt logic nghiệp vụ C# .NET 8 thành các hàm xử lý nhỏ gọn chạy trên môi trường AWS Lambda.
+- Cấu hình Amazon API Gateway làm cổng HTTP REST API tập trung, chịu trách nhiệm nhận yêu cầu từ Unity Client và định tuyến đến các Lambda tương ứng.
+- Tối ưu hóa quá trình biên dịch và đóng gói ứng dụng (dotnet publish) để giảm thiểu kích thước package và thời gian khởi động lạnh (cold start) của Lambda.
 
-* **Hệ thống Vật phẩm & Loot đồ:** Thiết kế mô hình dữ liệu chi tiết cho các nhóm vật phẩm game (Weapon, Armor, Accessory, Consumable) được phân theo 4 cấp độ hiếm.
-* **Thuật toán rớt đồ:** Viết mã thuật toán xác suất rơi vật phẩm có trọng số và công thức tự động điều chỉnh lượng Vàng/Kinh nghiệm theo cấp độ của quái/Boss.
-* **Backend API Kho đồ:** Xây dựng các hàm AWS Lambda xử lý các quy tắc ràng buộc số lượng kho đồ (tối đa 100 ô/nhân vật).
-* **Logic Trang bị/Gỡ trang bị:** Lập trình logic thay đổi trang bị nhân vật, tính toán lại các chỉ số nhân vật (Stats) theo thời gian thực và cập nhật dữ liệu vào DB.
-
-### Các công việc cần triển khai trong tuần này:
+### Các công việc triển khai:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Thiết kế các class vật phẩm (Weapon, Armor, Accessory, Consumable) trong dự án `GameShared` <br> - Thêm định nghĩa Enum độ hiếm (Common, Rare, Epic, Legendary) | 20/07/2026 | 20/07/2026 | Lý thuyết thiết kế game RPG |
-| 3 | - Lập trình thuật toán rớt đồ có trọng số (Weighted Random Algorithm) bằng C# <br> - Viết logic tính toán Gold/XP thưởng theo cấp độ Boss | 21/07/2026 | 21/07/2026 | Thuật toán phân bổ ngẫu nhiên |
-| 4 | - Xây dựng Lambda API bằng C# xử lý thao tác lấy danh sách túi đồ <br> - Viết code check giới hạn sức chứa kho đồ (Capacity Check tối đa 100 ô) | 22/07/2026 | 22/07/2026 | Lập trình AWS Lambda với C# |
-| 5 | - Phát triển API xử lý Logic Trang bị (Equip) và Gỡ trang bị (Unequip) <br> - Thiết lập các ràng buộc logic: 1 vị trí (slot) chỉ được mang tối đa 1 item | 23/07/2026 | 23/07/2026 | Mẫu thiết kế logic nghiệp vụ |
-| 6 | - Viết hàm tự động cộng/trừ các chỉ số nhân vật (Strength, Defense, HP, v.v.) dựa trên thông số cộng thêm của trang bị vừa mặc/gỡ | 24/07/2026 | 24/07/2026 | Công thức tính toán chỉ số game |
-| 7 | - Liên kết API kho đồ với Amazon DynamoDB để cập nhật thông tin túi đồ và chỉ số nhân vật một cách đồng thời, tránh xung đột dữ liệu | 25/07/2026 | 25/07/2026 | Giao dịch (Transactions) trên DynamoDB |
+| 2 | Phân rã mã nguồn thành các module xử lý độc lập: Auth, Character, Inventory, Story, Battle | 20/07/2026 | 20/07/2026 | Serverless Architecture Guide |
+| 3 | Lập trình các handler AWS Lambda tương ứng sử dụng thư viện `Amazon.Lambda.AspNetCoreServer` hoặc các Lambda Native Handlers | 21/07/2026 | 21/07/2026 | AWS Lambda .NET Programming |
+| 4 | Cấu hình Amazon API Gateway làm cổng REST API, thiết lập CORS Rules và Cognito Authorizers | 22/07/2026 | 22/07/2026 | AWS API Gateway Guide |
+| 5 | Tích hợp Route Mapping và Query/Body Parameter binding từ API Gateway sang các Lambda function | 23/07/2026 | 23/07/2026 | API Gateway Integrations |
+| 6 | Sử dụng lệnh `dotnet publish` kết hợp các cờ tối ưu hóa biên dịch để tạo tệp zip deploy | 24/07/2026 | 24/07/2026 | .NET CLI Publish Command |
+| 7 | Tối ưu hóa dung lượng bộ nhớ RAM (Memory Size) và thời gian chờ (Timeout) cho từng Lambda tùy theo đặc thù tác vụ (ví dụ: Lambda xử lý AI cần timeout lớn hơn Lambda Auth) | 25/07/2026 | 25/07/2026 | Lambda Performance Tuning |
 
-### Kết quả đạt được tuần 5:
-
-* **Mô hình hóa dữ liệu vật phẩm:** Thiết kế thành công các cấu trúc class đại diện cho vật phẩm game, phân chia rõ ràng theo các nhóm chức năng và 4 cấp độ hiếm (Common, Rare, Epic, Legendary).
-* **Thuật toán Loot hoạt động chính xác:** Hoàn thành thuật toán rơi vật phẩm có trọng số ngẫu nhiên. Lượng Vàng và XP nhận được tự động nhân theo hệ số cấp độ Boss, đảm bảo cân bằng game.
-* **API Kho đồ hoàn chỉnh:** Xây dựng xong API kiểm tra giới hạn túi đồ. Hệ thống tự động ngăn chặn nhặt thêm vật phẩm khi túi đồ đã đầy 100 ô và trả về thông báo lỗi trực quan cho người chơi.
-* **Logic trang bị chặt chẽ:** Hiện thực hóa thành công nghiệp vụ mặc/gỡ đồ. Đảm bảo đúng quy chuẩn game: khi mặc vũ khí mới, vũ khí cũ tự động chuyển về túi đồ chung, giải phóng slot.
-* **Đồng bộ chỉ số nhân vật thời gian thực:** Các thuộc tính bổ trợ của trang bị (ví dụ: giáp cộng thêm từ áo giáp Epic) được cộng trực tiếp vào tổng chỉ số nhân vật thời gian thực và ghi nhận đồng bộ vào DynamoDB qua cơ chế Transaction.
+### Kết quả đạt được:
+- Hệ thống backend .NET 8 được chia nhỏ thành 5 Lambda Functions riêng biệt vận hành độc lập, tăng tính mở rộng và khả năng chịu lỗi.
+- API Gateway được cấu hình bảo mật với Cognito User Pool Authorizer, chặn mọi request không kèm token hợp lệ trước khi gửi tới Lambda.
+- Đóng gói code thành công qua `dotnet publish` với cấu hình gọn nhẹ, giảm kích thước deploy package và tối ưu hóa thời gian chạy. Điều chỉnh RAM từ 256MB đến 1024MB tùy theo độ phức tạp của nghiệp vụ (Lambda xử lý AI/Bedrock cần tài nguyên lớn hơn).

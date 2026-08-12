@@ -7,27 +7,23 @@ pre: " <b> 1.5. </b> "
 ---
 
 ### Week 5 Objectives:
+- Refactor the .NET 8 backend code into granular AWS Lambda functions (Auth, Character, Inventory, Story, Battle).
+- Design and configure Amazon API Gateway endpoints to securely route HTTP requests from Unity Client to Lambda handlers.
+- Optimize compilation and build processes (dotnet publish) to control package sizes and minimize Lambda cold starts.
 
-* **Item & Loot System:** Design detailed data models for game items (Weapon, Armor, Accessory, Consumable) grouped into 4 rarity tiers.
-* **Loot Algorithms:** Implement a Weighted Random Algorithm for loot distribution and dynamic calculations of Gold/XP based on boss tiers.
-* **Inventory Management Backend:** Develop AWS Lambda functions handling capacity checking rules (max 100 slots per character).
-* **Equip/Unequip Logic:** Write backend logic for equipping items, modifying player statistics in real-time, and updating database values.
-
-### Tasks to be carried out this week:
+### Tasks Carried Out:
 
 | Day | Task | Start Date | End Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Design the class definitions for items (Weapon, Armor, Accessory, Consumable) in `GameShared` <br> - Add Rarity enums (Common, Rare, Epic, Legendary) | 20/07/2026 | 20/07/2026 | Game design object patterns |
-| 2 | - Code the Weighted Random loot drop algorithm in C# <br> - Code dynamic Gold and XP scaling multipliers based on boss levels | 21/07/2026 | 21/07/2026 | Weighted Distribution Algorithms |
-| 3 | - Build the Inventory management AWS Lambda endpoint in C# <br> - Implement the inventory capacity validation rule (maximum 100 items limit) | 22/07/2026 | 22/07/2026 | AWS Lambda C# Programming |
-| 4 | - Write the Equip and Unequip Lambda functions <br> - Implement rules checking (ensure only one item can occupy an equipment slot) | 23/07/2026 | 23/07/2026 | State Machine design patterns |
-| 5 | - Implement dynamic character statistics calculation (calculating final stats when items are equipped/unequipped) | 24/07/2026 | 24/07/2026 | Game stats calculation guidelines |
-| 6 | - Integrate the inventory logic with Amazon DynamoDB transactions to update inventory arrays and player stats atomically | 25/07/2026 | 25/07/2026 | Amazon DynamoDB Transactions |
+| Mon | Deconstruct core backend logic into modular code blocks: Auth, Character, Inventory, Story, Battle | 20/07/2026 | 20/07/2026 | Serverless Architecture Guide |
+| Tue | Code AWS Lambda handlers in C# using Amazon Lambda SDK libraries | 21/07/2026 | 21/07/2026 | AWS Lambda .NET Programming |
+| Wed | Set up Amazon API Gateway as the entry point, adding CORS configurations and Cognito Authorizers | 22/07/2026 | 22/07/2026 | AWS API Gateway Guide |
+| Thu | Map API Gateway routes and bind query/body payload parameters to lambda invocation payloads | 23/07/2026 | 23/07/2026 | API Gateway Integrations |
+| Fri | Execute `dotnet publish` with optimization flags to package the compiled binaries | 24/07/2026 | 24/07/2026 | .NET CLI Publish Command |
+| Sat | Tune Memory limits and Timeout durations on Lambda configuration templates according to task profiles | 25/07/2026 | 25/07/2026 | Lambda Performance Tuning |
 
-### Week 5 Achievements:
-
-* **Comprehensive Item Data Models:** Designed and integrated clean item schemas supporting various item types and four rarity tiers. These models are packed into the shared library for client-backend parity.
-* **Weighted Loot System:** Implemented a customizable Weighted Random Algorithm. Loot drops are calculated server-side based on probability matrices, and rewards (Gold/XP) adapt dynamically to the level of defeated bosses.
-* **Capacity Limit Enforced:** Built API endpoints for inventory operations containing inventory limits check (max 100 items). Attempts to collect loot beyond capacity are blocked gracefully with client notifications.
-* **Strict Equipment Logic:** Programmed backend logic enforcing unique equipment slots (Weapon, Armor, Accessory). Unequipping automatically handles moving items back to generic inventory slots.
-* **Real-time Stat Synchronization:** Implemented character stat recalculations. Equipping a Rare/Epic item instantly applies stat buffs to the character profile, and updates are committed atomically to DynamoDB to prevent state desynchronization.
+### Achievements:
+- Decoupled .NET 8 project code into 5 standalone microservices hosted as AWS Lambda functions.
+- Set up API Gateway serving secure HTTP endpoints validated by Cognito authorization.
+- Decreased deployment package sizes utilizing release optimizations during `dotnet publish`.
+- Adjusted execution parameters (RAM / Timeout thresholds) based on compute requirements, prioritizing higher budgets for Bedrock operations.

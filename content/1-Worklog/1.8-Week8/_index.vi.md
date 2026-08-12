@@ -1,85 +1,28 @@
 ---
 title: "Worklog Tuần 8"
-date: 2024-02-19
+date: 2026-08-09
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
 ### Mục tiêu tuần 8:
+- Kiểm thử tích hợp toàn trình (End-to-End) các luồng tương tác giữa Unity Client và AWS Backend.
+- Đánh giá độ bền vững và hiệu năng hệ thống dựa theo tiêu chuẩn AWS Well-Architected Framework.
+- Đóng gói toàn bộ mã nguồn, hoàn thiện báo cáo và tài liệu hướng dẫn triển khai chi tiết cho đồ án.
 
-* Hiểu AWS messaging services: SQS, SNS, và SES.
-* Tìm hiểu về các kiến trúc ứng dụng decoupled.
-* Overstend xử lý dựa trên queue và các thiết kế event-driven.
-* Khám phá các mô hình pub/sub và message filtering.
-
-### Các công việc cần triển khai trong tuần này:
+### Các công việc triển khai:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 1   | - Tìm hiểu SQS fundamentals (Standard vs FIFO) <br> - Hiểu message visibility timeout <br> - Khám phá queue attributes và permissions | 30/07/2026 | 30/07/2026 | AWS SQS User Guide |
-| 2   | - Tạo và cấu hình SQS queues <br> - Gửi và nhận messages sử dụng SDK <br> - Triển khai message processing workers | 31/07/2026 | 31/07/2026 | AWS SQS Configuration |
-| 3   | - Tìm hiểu SNS fundamentals và pub/sub pattern <br> - Tạo SNS topics và subscriptions <br> - Cấu hình message filtering | 01/08/2026 | 01/08/2026 | AWS SNS User Guide |
-| 4-5 | - Tích hợp SNS với SQS cho fan-out pattern <br> - Thiết lập email notifications sử dụng SES <br> - Xây dựng event-driven application | 02/08/2026 | 03/08/2026 | AWS Messaging Patterns |
+| 2 | Kiểm thử liên thông luồng xác thực: Đăng ký tài khoản, gửi OTP, đăng nhập và tự động Silent Login | 09/08/2026 | 09/08/2026 | Test Case - Auth Flow |
+| 3 | Thử nghiệm hệ thống AI Storyteller: tạo nhân vật, sinh bối cảnh cốt truyện và trả lời lựa chọn của người chơi | 10/08/2026 | 10/08/2026 | Test Case - AI Storyteller |
+| 4 | Kiểm thử hệ thống kho đồ và tính toán chiến đấu: nhặt vật phẩm, trang bị và tính toán kết quả trận đấu với Boss | 11/08/2026 | 11/08/2026 | Test Case - RPG Mechanics |
+| 5 | Tối ưu hóa hiệu năng, gỡ lỗi và đánh giá hệ thống theo 6 trụ cột của AWS Well-Architected Framework | 12/08/2026 | 12/08/2026 | AWS Well-Architected Tool |
+| 6 | Tổng hợp dữ liệu, hoàn thiện và định dạng báo cáo thực tập trên trang static site Hugo | 13/08/2026 | 14/08/2026 | Hướng dẫn viết báo cáo |
+| 7 | Đóng gói mã nguồn (Monorepo), hoàn thiện file README.md hướng dẫn triển khai và bàn giao đồ án | 15/08/2026 | 15/08/2026 | GitHub Repository Handover |
 
-### Kết quả đạt được tuần 8:
-
-* Hiểu được AWS messaging services cho việc xây dựng các ứng dụng decoupled.
-* Tìm hiểu được SQS Standard queues và SQS FIFO.
-* Tạo thành công SQS queues với các cấu hình phù hợp.
-* Triển khai message visibility timeout để xử lý lỗi.
-* Xây dựng các message processing workers để tiêu thụ messages.
-* Tìm hiểu được SNS là dịch vụ pub/sub messaging được quản lý.
-* Tạo SNS topics và cấu hình nhiều loại subscriptions.
-* Triển khai message filtering để định tuyến messages.
-* Thiết lập mô hình fan-out SNS-to-SQS.
-* Cấu hình Amazon SES để gửi transactional emails.
-* Xây dựng các ứng dụng event-driven sử dụng SNS và SQS.
-* Triển khai dead-letter queues để xử lý messages bị lỗi.
-* Tạo các kiến trúc ứng dụng có khả năng mở rộng, decoupled.
-
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 8:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Kết quả đạt được:
+- Hệ thống game liên thông hoàn chỉnh từ Client đến Backend Serverless. Không xuất hiện lỗi crash hoặc không khớp dữ liệu trong quá trình kiểm thử.
+- Hoàn thiện đánh giá kiến trúc hệ thống, đạt chuẩn các nguyên tắc về Bảo mật, Hiệu năng, Độ tin cậy và Tối ưu chi phí của AWS.
+- Hoàn thành báo cáo thực tập chi tiết và bàn giao mã nguồn dự án sạch sẽ, đầy đủ tài liệu hướng dẫn chạy thử.

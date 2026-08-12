@@ -8,24 +8,28 @@ pre: " <b> 1. </b> "
 
 **Trong trang này**, bạn sẽ tìm thấy nhật ký công việc chi tiết hàng tuần mô tả các mục tiêu, nhiệm vụ và kết quả đạt được trong quá trình thực tập của tôi tại chương trình **First Cloud AI Journey (FCAJ)**.
 
-Trong suốt lộ trình huấn luyện 6 tuần này, tôi đã tập trung xây dựng hạ tầng đám mây dạng mã nguồn (IaC), triển khai xác thực bảo mật người dùng, phát triển các API backend có khả năng mở rộng cho cơ chế game, đồng thời tích hợp trí tuệ nhân tạo tạo sinh (Generative AI) và tối ưu hóa hiệu năng máy chủ serverless.
+Lộ trình thực tập của tôi diễn ra trong vòng 2 tháng (8 tuần), tập trung vào các mốc thời gian sau:
 
-Dưới đây là tóm tắt các dấu mốc theo từng tuần:
+**Tuần 1:** [Onboarding, Công cụ & Cơ bản về Đám mây](1.1-week1/) (22/06/2026 - 27/06/2026)  
+Kết nối với các thành viên, làm quen với lộ trình thực tập 2 tháng và cài đặt các công cụ Hugo, Markdown, VS Code, draw.io. Nghiên cứu các khái niệm cơ bản về điện toán đám mây và tối ưu hóa chi phí AWS.
 
-**Tuần 1:** [Hội nhập, Công cụ lập trình & Cơ bản về Đám mây](1.1-week1/)
-Làm quen với lộ trình thực tập FCAJ, cài đặt các công cụ viết tài liệu và thiết kế (Hugo, Markdown, VS Code, draw.io), nghiên cứu hạ tầng toàn cầu của AWS.
+**Tuần 2:** [Khởi tạo & Bảo mật hạ tầng cơ bản](1.2-week2/) (29/06/2026 - 04/07/2026)  
+Bật MFA cho Root account, tạo IAM user theo Least Privilege. Tìm hiểu S3 Bucket, cấu hình quyền truy cập và CORS. Cài đặt AWS CLI, làm quen với AWS CDK và tải tài nguyên game lên S3.
 
-**Tuần 2:** [Tài khoản AWS Free Tier, Bảo mật & Kiểm soát ngân sách](1.2-week2/)
-Tạo lập tài khoản AWS cá nhân an toàn, kích hoạt mã tài trợ credit 200$, thao tác console và thiết lập AWS Budgets chống phát sinh chi phí ngoài mong muốn.
+**Tuần 3:** [Xác thực Cognito & Cơ sở dữ liệu Game](1.3-week3/) (06/07/2026 - 11/07/2026)  
+Tạo Cognito User Pool, lập trình các API Auth (Register, Login, RefreshToken) trên C# Backend kết nối Unity. Thiết kế cơ sở dữ liệu và triển khai DynamoDB Repository cho game.
 
-**Tuần 3:** [Lưu trữ tĩnh, Cơ sở dữ liệu & Quản trị qua dòng lệnh](1.3-week3/)
-Triển khai hosting website tĩnh trên S3, thiết lập CSDL quan hệ RDS và NoSQL DynamoDB, theo dõi tài nguyên bằng CloudWatch Alarms và thao tác qua AWS CLI.
+**Tuần 4:** [Tích hợp Amazon Bedrock AI](1.4-week4/) (13/07/2026 - 18/07/2026)  
+Kết nối C# với Bedrock AI, lập trình PromptBuilder và xử lý đầu ra JSON từ Bedrock sinh câu chuyện, lựa chọn hành động và bối cảnh Boss động.
 
-**Tuần 4:** [Tự động hóa hạ tầng (IaC) & Xác thực người chơi bằng Cognito](1.4-week4/)
-Sử dụng AWS CDK (C#) để định nghĩa và deploy tài nguyên tự động, đồng bộ thư viện dùng chung với Unity client qua MSBuild, cấu hình Cognito và API đăng nhập tự động (Silent Login).
+**Tuần 5:** [Kiến trúc Serverless với Lambda & API Gateway](1.5-week5/) (20/07/2026 - 25/07/2026)  
+Tách logic thành các Lambda functions, cấu hình API Gateway và tối ưu hóa RAM, Timeout cho Lambda thông qua dotnet publish.
 
-**Tuần 5:** [Thuật toán Loot vật phẩm & API quản lý kho đồ](1.5-week5/)
-Thiết kế cấu hình vật phẩm game, lập trình thuật toán rơi đồ ngẫu nhiên có trọng số, xây dựng API quản lý giới hạn kho đồ bằng Lambda C# và cập nhật đồng bộ DynamoDB.
+**Tuần 6:** [Tự động hóa hạ tầng bằng AWS CDK](1.6-week6/) (27/07/2026 - 01/08/2026)  
+Định nghĩa hạ tầng hoàn chỉnh bằng AWS CDK (C#), phân tách thành các Stack dễ quản lý, thực hành các lệnh `cdk deploy`, `cdk synth`, và `cdk destroy`.
 
-**Tuần 6:** [Tích hợp Generative AI cốt truyện game & Tối ưu hiệu năng Lambda](1.6-week6/)
-Liên kết backend với Amazon Bedrock (Claude model) sinh cốt truyện nhập vai động, phân tích hiện tượng lag cold start của Lambda và tối ưu hóa bằng Native AOT kết hợp SnapStart.
+**Tuần 7:** [Bảo mật, Giám sát & Tối ưu chi phí](1.7-week7/) (03/08/2026 - 08/08/2026)  
+Chuyển thông tin nhạy cảm vào Environment Variables, cấu hình CloudWatch Dashboard & Alarms, phân tích chi phí với Cost Explorer.
+
+**Tuần 8:** [Kiểm thử End-to-End & Bàn giao đồ án](1.8-week8/) (09/08/2026 - 15/08/2026)  
+Kiểm thử tích hợp toàn bộ các tính năng game, đánh giá theo AWS Well-Architected Framework, hoàn thiện báo cáo và đóng gói mã nguồn.

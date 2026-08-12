@@ -7,27 +7,23 @@ pre: " <b> 1.6. </b> "
 ---
 
 ### Mục tiêu tuần 6:
+- Tự động hóa việc khởi tạo và cập nhật hạ tầng đám mây bằng công cụ AWS CDK (Cloud Development Kit) sử dụng ngôn ngữ C#.
+- Khai báo định nghĩa mã nguồn cho toàn bộ tài nguyên: Cognito, DynamoDB, Lambda, API Gateway, S3 và CloudWatch.
+- Thiết kế phân rã hạ tầng thành nhiều Stack nhỏ độc lập để tăng tính dễ bảo trì và cập nhật.
+- Thực hành và làm quen với vòng đời triển khai hạ tầng: `cdk synth`, `cdk deploy` và `cdk destroy`.
 
-* **Tích hợp Generative AI:** Kết nối Backend C# với dịch vụ Amazon Bedrock (Claude AI) để tự động hóa dẫn dắt cốt truyện game RPG linh hoạt theo tương tác của người chơi.
-* **Giải quyết độ trễ Cold Start:** Phân tích và khắc phục hiện tượng đứng màn hình (freeze UI) trên client Unity do thời gian khởi động lạnh của .NET Lambda.
-* **Native AOT & SnapStart:** Áp dụng công nghệ Native AOT cho các API nhẹ và cấu hình AWS Lambda SnapStart cho các API xử lý nặng.
-* **Học hỏi công nghệ mới:** Tham gia sự kiện công nghệ Agent Force - Deepdive.
-
-### Các công việc cần triển khai trong tuần này:
+### Các công việc triển khai:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tích hợp SDK Amazon Bedrock vào Backend C# <br> - Viết system prompt định hình lối dẫn truyện RPG của Claude AI | 27/07/2026 | 27/07/2026 | Hướng dẫn Amazon Bedrock |
-| 3 | - Thiết lập truyền tham số lựa chọn của người chơi vào Bedrock API <br> - Parse kết quả JSON trả về hiển thị lên giao diện Unity | 28/07/2026 | 28/07/2026 | Kỹ nghệ Prompt với Claude |
-| 4 | - Đo đạc log Unity và CloudWatch Logs để cô lập nguyên nhân giật lag do Lambda khởi động lạnh | 29/07/2026 | 29/07/2026 | Tài liệu CloudWatch Logs |
-| 5 | - Cấu hình Native AOT compile cho các API đọc nhanh (Get Profile, Inventory Check) và test tốc độ | 30/07/2026 | 30/07/2026 | Hướng dẫn Native AOT .NET |
-| 6 | - Kích hoạt AWS Lambda SnapStart cho các API tính toán nặng (xử lý trận đấu, gọi Bedrock AI) | 31/07/2026 | 31/07/2026 | Tài liệu Lambda SnapStart |
-| 7 | - Tham dự sự kiện Agent Force - Deepdive <br> - Tham gia các buổi thảo luận chuyên sâu về hệ thống Agent AI | 01/08/2026 | 01/08/2026 | Chương trình Event Agent Force |
+| 2 | Cài đặt AWS CDK CLI, khởi tạo project C# CDK mới và tìm hiểu các khái niệm Constructs, Stacks, App | 27/07/2026 | 27/07/2026 | AWS CDK Getting Started |
+| 3 | Lập trình khai báo hạ tầng lưu trữ (S3 bucket, DynamoDB tables) và thiết lập chỉ mục GSIs | 28/07/2026 | 28/07/2026 | AWS CDK Database Construct |
+| 4 | Định nghĩa tài nguyên Cognito User Pool, App Client và các thiết lập xác thực người dùng | 29/07/2026 | 29/07/2026 | AWS CDK Cognito Construct |
+| 5 | Viết code Stack chứa Lambda Functions, cấp quyền IAM Role tối thiểu (Read/Write DynamoDB, Invoke Bedrock) | 30/07/2026 | 30/07/2026 | AWS CDK IAM & Lambda |
+| 6 | Định nghĩa Stack API Gateway để phơi bày các endpoint RESTful và gắn Cognito Authorizers | 31/07/2026 | 31/07/2026 | AWS CDK API Gateway |
+| 7 | Thực hành triển khai hệ thống: chạy `cdk synth` sinh mẫu CloudFormation, `cdk deploy` đẩy hạ tầng lên AWS, và `cdk destroy` để làm sạch môi trường | 01/08/2026 | 01/08/2026 | AWS CDK CLI Commands |
 
-### Kết quả đạt được tuần 6:
-
-* **Tạo cốt truyện động bằng AI:** Tích hợp thành công Amazon Bedrock sử dụng mô hình Claude. Game có khả năng sinh các tình huống truyện và nhiệm vụ ngẫu nhiên dựa vào hành vi của người chơi một cách tự nhiên.
-* **Tìm ra nguyên nhân lag:** Xác định hiện tượng giật màn hình 3-5 giây trên Unity là do thời gian khởi chạy (bootstrap runtime) của .NET CLR trên Lambda trong lần đầu gọi API (cold start).
-* **Native AOT đạt hiệu năng cao:** Áp dụng thành công Native AOT cho các Lambda API đọc dữ liệu. Thời gian phản hồi cold start giảm đáng kể từ vài giây xuống chỉ còn 20-50ms, giúp trải nghiệm game mượt mà.
-* **SnapStart tối ưu chi phí:** Cấu hình thành công SnapStart cho các Lambda API viết phức tạp. Việc sử dụng snapshot lưu sẵn trạng thái giúp loại bỏ độ trễ cold start mà không làm tăng chi phí hạ tầng (không cần dùng Provisioned Concurrency).
-* **Mở rộng kiến thức AI Agent:** Tích lũy nhiều kiến thức giá trị về cách triển khai các hệ thống AI tự trị, mô hình Multi-Agent tại sự kiện Agent Force, hỗ trợ định hướng phát triển sản phẩm tiếp theo.
+### Kết quả đạt được:
+- Toàn bộ hạ tầng đám mây của dự án game được đặc tả bằng mã nguồn (Infrastructure as Code) viết bằng C#, loại bỏ hoàn toàn việc click chọn thủ công trên console.
+- Tổ chức hạ tầng khoa học thành 4 Stacks riêng biệt: StorageStack, IdentityStack, ComputeStack và ApiGatewayStack.
+- Thành thạo thao tác tự động hóa hệ thống bằng các dòng lệnh CDK, giảm thiểu tối đa sai sót khi nhân bản môi trường.

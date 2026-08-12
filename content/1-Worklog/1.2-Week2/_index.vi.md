@@ -7,28 +7,23 @@ pre: " <b> 1.2. </b> "
 ---
 
 ### Mục tiêu tuần 2:
+- Khởi tạo môi trường AWS an toàn và thiết lập các biện pháp bảo mật hạ tầng cơ bản.
+- Tìm hiểu cấu hình lưu trữ tĩnh với Amazon S3, bao gồm thiết lập quyền truy cập và cấu hình CORS.
+- Làm quen với giao diện dòng lệnh AWS CLI, kiến trúc Serverless, và bộ công cụ hạ tầng dạng mã nguồn AWS CDK (C#).
+- Tải tài nguyên game ban đầu lên S3 bucket phục vụ phát triển game.
 
-* **Thiết lập & Bảo mật tài khoản:** Tạo và cấu hình thành công tài khoản AWS Free Tier an toàn.
-* **Nhận Credits hỗ trợ:** Hoàn thành thiết lập để lấy 200$ credit tài trợ học tập từ AWS.
-* **Làm quen giao diện:** Khám phá cấu trúc và cách sử dụng AWS Management Console.
-* **Kiểm soát chi phí:** Quản lý chi tiêu với các loại AWS Budgets để tránh phát sinh chi phí ngoài ý muốn.
-* **Quy trình hỗ trợ:** Thực hành tạo và quản lý các yêu cầu hỗ trợ với dịch vụ AWS Support.
-
-### Các công việc cần triển khai trong tuần này:
+### Các công việc triển khai:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Đăng ký tài khoản AWS Free Tier mới <br> - Cấu hình Multi-Factor Authentication (MFA) cho tài khoản Root và tạo tài khoản IAM Admin | 29/06/2026 | 29/06/2026 | Hướng dẫn tạo tài khoản AWS |
-| 3 | - Chuẩn bị hồ sơ và submit thông tin để nhận gói tài trợ 200$ credit AWS dành cho thực tập sinh | 30/06/2026 | 30/06/2026 | Nội quy chương trình FCAJ |
-| 4 | - Tìm hiểu giao diện AWS Management Console, thanh tìm kiếm thông tin dịch vụ và cách sắp xếp tài nguyên | 01/07/2026 | 01/07/2026 | Hướng dẫn sử dụng AWS Console |
-| 5 | - Cấu hình AWS Budgets: tạo các bộ lọc cảnh báo cho Cost Budget và Usage Budget để theo dõi hóa đơn | 02/07/2026 | 02/07/2026 | Tài liệu AWS Budgets |
-| 6 | - Thiết lập Reserved Instances Budget và Savings Plans Budget để làm quen các mô hình cam kết chi phí | 03/07/2026 | 03/07/2026 | Tài liệu Billing & Cost Management |
-| 7 | - Tìm hiểu AWS Support Center <br> - Tạo case thử nghiệm yêu cầu hỗ trợ (Support Request) và cách theo dõi phản hồi | 04/07/2026 | 04/07/2026 | Hướng dẫn AWS Support |
+| 2 | Kích hoạt MFA cho tài khoản Root AWS để bảo vệ tối đa quyền quản trị cao nhất | 29/06/2026 | 29/06/2026 | AWS MFA Setup Guide |
+| 3 | Tạo các tài khoản IAM User/Role tuân thủ nguyên lý quyền tối thiểu (Least Privilege) | 30/06/2026 | 30/06/2026 | AWS IAM Best Practices |
+| 4 | Cấu hình Amazon S3 Bucket lưu trữ tài nguyên game, thiết lập S3 Bucket Policy | 01/07/2026 | 01/07/2026 | Amazon S3 Developer Guide |
+| 5 | Thiết lập CORS (Cross-Origin Resource Sharing) cho S3 để cho phép game client truy xuất | 02/07/2026 | 02/07/2026 | Amazon S3 CORS Guide |
+| 6 | Cài đặt AWS CLI dưới máy cá nhân và thực hiện cấu hình Credentials | 03/07/2026 | 03/07/2026 | AWS CLI User Guide |
+| 7 | Nghiên cứu tổng quan về Serverless, giới thiệu AWS CDK (C#) và tải tài nguyên game lên S3 | 04/07/2026 | 04/07/2026 | AWS CDK Intro / Game Assets |
 
-### Kết quả đạt được tuần 2:
-
-* **Kích hoạt tài khoản an toàn:** Đăng ký thành công tài khoản AWS cá nhân. Đã kích hoạt MFA qua ứng dụng di động để bảo mật root, tuân thủ nguyên tắc không sử dụng root account cho các thao tác hàng ngày bằng cách tạo tài khoản IAM Admin riêng.
-* **Nhận thành công 200$ Credit:** Liên kết thành công code khuyến mãi 200$ vào tài khoản, giúp yên tâm triển khai các bài thực hành chuyên sâu.
-* **Sử dụng Console thành thạo:** Hiểu rõ cách chuyển đổi vùng (Region), cách ghim dịch vụ thường dùng và cơ chế hiển thị tài nguyên toàn cầu.
-* **Kiểm soát chi tiêu chặt chẽ:** Tạo 4 nhóm ngân sách (Cost, Usage, RI, Savings Plans) với các ngưỡng cảnh báo gửi email về hòm thư cá nhân khi chi phí vượt quá 80% hạn mức.
-* **Nắm rõ quy trình hỗ trợ:** Biết cách thao tác với AWS Support Center để mở ticket hỗ trợ kỹ thuật hoặc nâng hạn mức tài nguyên (Service Quota Increase) khi cần thiết.
+### Kết quả đạt được:
+- Tài khoản AWS root được bảo vệ an toàn bằng MFA. Không sử dụng tài khoản root cho tác vụ hàng ngày.
+- Khởi tạo thành công S3 bucket chứa assets của game, cấu hình CORS hợp lệ để Unity Client có thể download trực tiếp tài nguyên qua HTTPS.
+- Cài đặt và chạy thử thành công các lệnh kiểm tra cấu hình thông qua AWS CLI. Nắm vững tư duy thiết kế IaC cơ bản với AWS CDK.
