@@ -1,9 +1,9 @@
 ---
 title : "Cấu hình AWS Bedrock & Backend"
-date : 2024-01-01
+date : 2026-08-12
 weight : 1
 chapter : false
-pre : " <b> 5.3.1 </b> "
+pre : " <b> 5.3.4 </b> "
 ---
 
 #### Hướng dẫn kết nối và cấu hình AWS Bedrock cho AI Dungeon Master
