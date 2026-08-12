@@ -19,19 +19,39 @@ Trong bước này, bạn sẽ kiểm thử khả năng sinh cốt truyện th�
   ```json
   {
     "characterId": "char-uuid-1234",
-    "theme": "Dark Forest Crypt"
+    "storyFileId": "chapter_1"
   }
   ```
 - **Phản hồi mong đợi (200 OK):**
   ```json
   {
-    "sessionId": "session-5566",
-    "narrative": "Bạn đang đứng trước lối vào Khu Rừng Thầm Thì. Chiếc cổng sắt hoen gỉ kêu ken két dẫn vào một hầm mộ cổ...",
-    "choices": [
-      "Thắp đuốc và bước vào trong",
-      "Kiểm tra các ký tự cổ trên cổng",
-      "Dùng phép dò tìm năng lượng"
-    ]
+    "success": true,
+    "message": "Success",
+    "data": {
+      "sessionId": "session-5566",
+      "currentNodeId": "node_01",
+      "currentLocation": "Dark Forest Crypt",
+      "narrativeText": "Bạn đang đứng trước lối vào Khu Rừng Thầm Thì. Chiếc cổng sắt hoen gỉ kêu ken két dẫn vào một hầm mộ cổ...",
+      "choices": [
+        {
+          "label": "Lựa chọn 1",
+          "description": "Thắp đuốc và bước vào trong",
+          "nextNodeId": "node_02"
+        },
+        {
+          "label": "Lựa chọn 2",
+          "description": "Kiểm tra các ký tự cổ trên cổng",
+          "nextNodeId": "node_03"
+        }
+      ],
+      "character": null,
+      "triggerBattle": false,
+      "bossId": null,
+      "bossName": null,
+      "bossLevel": null,
+      "debugPrompt": null,
+      "storyCompleted": false
+    }
   }
   ```
 
@@ -43,17 +63,30 @@ Trong bước này, bạn sẽ kiểm thử khả năng sinh cốt truyện th�
 - **Request Body:**
   ```json
   {
+    "characterId": "char-uuid-1234",
     "sessionId": "session-5566",
-    "playerAction": "Tôi thắp đuốc và hô to vào trong bóng tối."
+    "playerInput": "Tôi thắp đuốc và hô to vào trong bóng tối."
   }
   ```
 - **Phản hồi mong đợi (200 OK):**
   ```json
   {
-    "sessionId": "session-5566",
-    "narrative": "Ánh lửa thắp sáng những bức tường đá ẩm ướt. Đôi mắt đỏ rực lóe lên trong bóng tối khi một Chiến Binh Xương rút kiếm lao ra!",
-    "encounterTriggered": true,
-    "bossId": "boss-skeleton-01"
+    "success": true,
+    "message": "Success",
+    "data": {
+      "sessionId": "session-5566",
+      "currentNodeId": "node_02",
+      "currentLocation": "Dark Forest Crypt",
+      "narrativeText": "Ánh lửa thắp sáng những bức tường đá ẩm ướt. Đôi mắt đỏ rực lóe lên trong bóng tối khi một Chiến Binh Xương rút kiếm lao ra!",
+      "choices": [],
+      "character": null,
+      "triggerBattle": true,
+      "bossId": "boss-skeleton-01",
+      "bossName": "Skeleton Warrior",
+      "bossLevel": 1,
+      "debugPrompt": null,
+      "storyCompleted": false
+    }
   }
   ```
 
@@ -66,20 +99,65 @@ Trong bước này, bạn sẽ kiểm thử khả năng sinh cốt truyện th�
   ```json
   {
     "characterId": "char-uuid-1234",
-    "bossId": "boss-skeleton-01",
-    "action": "Holy Strike"
+    "encounterId": "encounter-8888",
+    "equippedItemIds": [
+      "item_rusty_sword"
+    ]
   }
   ```
 - **Phản hồi mong đợi (200 OK):**
   ```json
   {
-    "playerDamageDealt": 35,
-    "bossDamageDealt": 8,
-    "characterCurrentHp": 92,
-    "bossCurrentHp": 0,
-    "isVictory": true,
-    "lootDropped": [
-      { "itemId": "item-sun-pendant", "name": "Sun Pendant", "type": "Accessory" }
-    ]
+    "success": true,
+    "message": "Success",
+    "data": {
+      "battleId": "battle-uuid-9999",
+      "encounterId": "encounter-8888",
+      "isPlayerVictory": true,
+      "playerPower": 150.0,
+      "bossPower": 80.0,
+      "battleScore": 70.0,
+      "luckyEffects": [
+        "Critical Hit"
+      ],
+      "turns": [
+        {
+          "attackerName": "Valerius",
+          "logMessage": "Valerius gây 35 sát thương!",
+          "damage": 35,
+          "playerHpRemaining": 92,
+          "bossHpRemaining": 0,
+          "isCritical": true
+        }
+      ],
+      "rewards": {
+        "goldEarned": 50,
+        "expEarned": 100,
+        "lootItems": [
+          {
+            "itemId": "item-sun-pendant",
+            "itemName": "Sun Pendant",
+            "rarity": "Rare",
+            "quantity": 1
+          }
+        ]
+      },
+      "updatedCharacter": {
+        "characterId": "char-uuid-1234",
+        "name": "Valerius the Paladin",
+        "level": 2,
+        "experience": 100,
+        "hp": 92,
+        "maxHp": 100,
+        "attack": 10,
+        "defense": 5,
+        "criticalRate": 0.05,
+        "luckyRate": 0.05,
+        "gold": 100,
+        "className": "Paladin",
+        "status": "Alive",
+        "currentLocationId": "spawn_village"
+      }
+    }
   }
   ```

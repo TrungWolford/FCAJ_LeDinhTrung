@@ -25,7 +25,17 @@ Trong bước này, bạn sẽ kiểm thử đăng ký, đăng nhập người d
 - **Phản hồi mong đợi (200 OK):**
   ```json
   {
-    "message": "User registered successfully. Please check your email for confirmation."
+    "success": true,
+    "message": "Registration successful",
+    "data": {
+      "token": null,
+      "userId": null,
+      "displayName": null,
+      "expiresAt": 0,
+      "refreshToken": null,
+      "idToken": null,
+      "errorCode": "USER_NOT_CONFIRMED"
+    }
   }
   ```
 
@@ -43,9 +53,17 @@ Trong bước này, bạn sẽ kiểm thử đăng ký, đăng nhập người d
 - **Phản hồi mong đợi (200 OK):**
   ```json
   {
-    "idToken": "eyJraWQiOiJ...",
-    "accessToken": "eyJraWQiOiJ...",
-    "refreshToken": "eyJjdHkiOiJ..."
+    "success": true,
+    "message": "Login successful",
+    "data": {
+      "token": "eyJraWQiOiJ...",
+      "userId": "user-uuid-1234",
+      "displayName": "player1",
+      "expiresAt": 1735689600,
+      "refreshToken": "eyJjdHkiOiJ...",
+      "idToken": "eyJraWQiOiJ...",
+      "errorCode": null
+    }
   }
   ```
 
@@ -58,19 +76,29 @@ Trong bước này, bạn sẽ kiểm thử đăng ký, đăng nhập người d
   ```json
   {
     "name": "Valerius the Paladin",
-    "characterClass": "Paladin"
+    "className": "Paladin"
   }
   ```
 - **Phản hồi mong đợi (201 Created):**
   ```json
   {
-    "characterId": "char-uuid-1234",
-    "name": "Valerius the Paladin",
-    "class": "Paladin",
-    "level": 1,
-    "hp": 100,
-    "maxHp": 100,
-    "attack": 15,
-    "defense": 10
+    "success": true,
+    "message": "Character created",
+    "data": {
+      "characterId": "char-uuid-1234",
+      "name": "Valerius the Paladin",
+      "level": 1,
+      "experience": 0,
+      "hp": 100,
+      "maxHp": 100,
+      "attack": 10,
+      "defense": 5,
+      "criticalRate": 0.05,
+      "luckyRate": 0.05,
+      "gold": 50,
+      "className": "Paladin",
+      "status": "Alive",
+      "currentLocationId": "spawn_village"
+    }
   }
   ```
