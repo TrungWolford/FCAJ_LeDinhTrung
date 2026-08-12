@@ -1,12 +1,12 @@
 ---
-title: "AWS FCAJ Agent Forge - Deepdive"
+title: "AWS AI Builder"
 date: 2026-07-18
 weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Bài thu hoạch: "AWS FCAJ Agent Forge - Deepdive"
+# Bài thu hoạch: "AWS AI Builder"
 
 ### Mục Đích Của Sự Kiện
 

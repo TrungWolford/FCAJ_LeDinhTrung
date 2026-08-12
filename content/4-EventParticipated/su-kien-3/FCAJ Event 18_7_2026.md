@@ -1,4 +1,4 @@
-TÀI LIỆU CHI TIẾT SỰ KIỆN: AWS FCAJ AGENT FORGE - DEEPDIVE
+TÀI LIỆU CHI TIẾT SỰ KIỆN: AWS AWS AI Builder
 I. TỔNG QUAN SỰ KIỆN & NGỮ CẢNH CHUYÊN MÔN
 	Tên sự kiện: AWS FCAJ Agent Forge - Deepdive.
 	Đơn vị tổ chức: AWS Study Group.
