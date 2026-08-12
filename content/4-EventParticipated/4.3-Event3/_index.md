@@ -65,13 +65,13 @@ pre: " <b> 4.3. </b> "
 
 ### Event Experience
 
-Attending the **AWS FCAJ Agent Forge - Deepdive** session led by speaker **Vy Lam** provided invaluable insights and experiences:
+Attending the **AWS AI Builder** session led by speaker **Vy Lam** provided invaluable insights and experiences:
 
 - **Inspiring Speaker:** Through her deep, practical, enthusiastic, and high-energy sharing, Ms. Lam Hoang Cat Vy strongly motivated the "Builders".
 - **Unlocking Tech Mindset:** The event not only offered a gateway to the latest Generative AI and AI Agent trends on AWS but also unlocked logical thinking and breakthrough problem-solving skills.
 - **High-Quality Lessons:** Practical examples of RAG, Agentic AI, and Graph RAG demystified many concerns about designing and implementing real-world enterprise AI solutions.
 
 #### Some event photos
-![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/sukien3.jpg)
+![AWS AI Builder](hinh-anh-sk-3/sukien3.jpg)
 
 > Ms. Vy Lam's sharing session has fueled my energy and clearly shaped my design thinking for professional AI Agent & RAG systems, leaving me ready to embrace and deploy the most advanced AI solutions on the AWS platform.

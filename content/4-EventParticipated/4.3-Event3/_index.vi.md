@@ -65,14 +65,14 @@ pre: " <b> 4.3. </b> "
 
 ### Trải nghiệm trong event
 
-Tham gia buổi **AWS FCAJ Agent Forge - Deepdive** với sự dẫn dắt của diễn giả **Vy Lâm** đã mang lại cho tôi những trải nghiệm vô cùng quý giá:
+Tham gia buổi **AWS AI Builder** với sự dẫn dắt của diễn giả **Vy Lâm** đã mang lại cho tôi những trải nghiệm vô cùng quý giá:
 
 - **Sự truyền lửa từ diễn giả:** Thông qua những chia sẻ sâu sắc, thực tế cùng với tinh thần nhiệt huyết, đầy năng lượng, chị Lâm Hoàng Cát Vy đã truyền động lực mạnh mẽ cho các "Builder". 
 - **Khai mở tư duy công nghệ:** Sự kiện giúp tôi không chỉ có cơ hội để được tiếp cận các xu hướng Generative AI và AI Agent mới nhất trên nền tảng AWS mà còn được khai mở tư duy logic và kỹ năng giải quyết vấn đề một cách đột phá.
 - **Nội dung bài học chất lượng:** Các ví dụ thực tế về RAG, Agentic AI và Graph RAG đã tháo gỡ nhiều thắc mắc của tôi về cách thiết kế và triển khai AI thực tế trong môi trường sản phẩm thực tế.
 
 #### Một số hình ảnh khi tham gia sự kiện
-![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/sukien3.jpg)
+![AWS AI Builder](hinh-anh-sk-3/sukien3.jpg)
 
 
 > Buổi chia sẻ của chị Vy Lâm đã tiếp thêm năng lượng và định hình rõ nét tư duy thiết kế hệ thống AI Agent & RAG chuyên nghiệp cho tôi, giúp tôi sẵn sàng đón nhận và triển khai các giải pháp AI tiên tiến nhất trên nền tảng AWS.

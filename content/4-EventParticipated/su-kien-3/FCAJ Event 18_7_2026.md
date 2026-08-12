@@ -1,6 +1,6 @@
-TÀI LIỆU CHI TIẾT SỰ KIỆN: AWS AWS AI Builder
+TÀI LIỆU CHI TIẾT SỰ KIỆN: AWS AI Builder
 I. TỔNG QUAN SỰ KIỆN & NGỮ CẢNH CHUYÊN MÔN
-	Tên sự kiện: AWS FCAJ Agent Forge - Deepdive.
+	Tên sự kiện: AWS AI Builder.
 	Đơn vị tổ chức: AWS Study Group.
 	Diễn giả: Chị Lâm Hoàng Cát Vy (Senior Systems Analyst - AI Platform Owner - IT Young Talents Program Manager).
 	Chủ đề chính: Định nghĩa RAG (Retrieval-Augmented Generation), Agentic AI, và Graph RAG (Graph Retrieval-Augmented Generation).
