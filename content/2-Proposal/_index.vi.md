@@ -28,8 +28,18 @@ Trò chơi cho phép người chơi tạo nhân vật và đắm chìm vào nh�
 
 Dự án sử dụng 100% kiến trúc Serverless trên nền tảng AWS, tách biệt hoàn toàn giữa Game Client và Backend để đảm bảo bảo mật và hiệu năng.
 
-![AWS Architecture Diagram](images/aws-architect-project.png)
+![AWS Architecture Diagram](images/architecture.jpg)
 *(Sơ đồ kiến trúc tổng thể của hệ thống)*
+
+### Quy trình chính trong sơ đồ:
+1. **Unity Client** gửi yêu cầu `POST /story/action` (kèm theo Bearer JWT Token).
+2. **Amazon API Gateway** tiếp nhận và kiểm tra JWT Token bằng **Amazon Cognito Authorizer**.
+3. Sau khi xác thực hợp lệ, **API Gateway** gọi (**invoke**) Lambda function `StoryActionFunction`.
+4. `StoryActionFunction` đọc mẫu Prompt từ **Amazon S3** thông qua **Amazon CloudFront CDN**.
+5. `StoryActionFunction` thực hiện cuộc gọi API tới **Amazon Bedrock (InvokeModel)** để yêu cầu AI sinh cốt truyện.
+6. `StoryActionFunction` lưu trữ kết quả và trạng thái màn chơi vào **Amazon DynamoDB** (bảng `StoryActions`, `StorySessions`).
+7. **Amazon CloudWatch** tự động ghi nhận (log) và thu thập số liệu (metrics) về quá trình thực thi.
+
 
 *   **Amazon API Gateway & Cognito:** Xử lý xác thực người dùng (Login/Register) và cấp phát JWT Token. Mọi yêu cầu từ Game Client đều được xác thực nghiêm ngặt tại cổng này.
 *   **Compute Tier (AWS Lambda - .NET 8):** Các hàm phân tán đảm nhận logic nghiệp vụ: Quản lý nhân vật, hệ thống kho đồ (Inventory), tính toán kết quả trận đấu (Battle System), và xử lý giao tiếp với AI.

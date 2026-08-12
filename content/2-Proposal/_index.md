@@ -28,8 +28,18 @@ The game allows players to create characters and embark on completely open-ended
 
 The project employs a 100% Serverless architecture on AWS, strictly separating the Game Client from the Cloud Backend to ensure security and performance.
 
-![AWS Architecture Diagram](images/aws-architect-project.png)
+![AWS Architecture Diagram](images/architecture.jpg)
 *(System Architecture Overview)*
+
+### Key Process Flow in the Diagram (Quy trình chính trong sơ đồ):
+1. **Unity Client** sends a `POST /story/action` request containing the Bearer JWT Token.
+2. **Amazon API Gateway** receives the request and validates the JWT Token using **Amazon Cognito Authorizer**.
+3. Once authenticated, **API Gateway** invokes the `StoryActionFunction` (Lambda).
+4. `StoryActionFunction` reads the prompt template from **Amazon S3** via **Amazon CloudFront CDN**.
+5. `StoryActionFunction` calls **Amazon Bedrock (InvokeModel)** to let AI generate the story content and options.
+6. `StoryActionFunction` persists the results and game state into **Amazon DynamoDB** (specifically `StoryActions` and `StorySessions` tables).
+7. **Amazon CloudWatch** automatically records execution logs and metrics.
+
 
 *   **Amazon API Gateway & Cognito:** Serves as the secure entry point, managing player authentication (Login/Register) and validating JWT Tokens for all incoming requests.
 *   **Compute Tier (AWS Lambda - .NET 8):** Distributed functions handle the heavy lifting: managing character states, resolving turn-based combat, handling inventory logic, and interfacing with the AI models.
