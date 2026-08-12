@@ -1,6 +1,6 @@
 ---
 title: "AWS FCAJ Agent Forge - Deepdive"
-date: 2026-08-01
+date: 2026-07-18
 weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
@@ -72,7 +72,6 @@ Attending the **AWS FCAJ Agent Forge - Deepdive** session led by speaker **Vy La
 - **High-Quality Lessons:** Practical examples of RAG, Agentic AI, and Graph RAG demystified many concerns about designing and implementing real-world enterprise AI solutions.
 
 #### Some event photos
-![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/IMG_20260801_091335.webp)
-![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/IMG_20260801_110623.webp)
+![AWS FCAJ Agent Forge - Deepdive](hinh-anh-sk-3/sukien3.jpg)
 
 > Ms. Vy Lam's sharing session has fueled my energy and clearly shaped my design thinking for professional AI Agent & RAG systems, leaving me ready to embrace and deploy the most advanced AI solutions on the AWS platform.
