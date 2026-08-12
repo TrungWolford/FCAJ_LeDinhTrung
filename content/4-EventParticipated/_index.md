@@ -36,7 +36,7 @@ During my internship, I participated in three events. Each one was a memorable e
 
 &emsp;**Date & Time:** 09:00 July 18, 2026
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Ben Nghe Ward, Ho Chi Minh City  
+&emsp;**Location:** Hall E - Saigon University (273 An Duong Vuong, District 5, Ho Chi Minh City) 
 
 &emsp;**Role:** Attendee  
 

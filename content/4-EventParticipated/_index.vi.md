@@ -35,7 +35,7 @@ Trong quá trình thực tập, em đã tham gia 3 events, với mỗi event là
 
 &emsp;**Thời gian:** 09:00 ngày 18/07/2026
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Bến Nghé, thành phố Hồ Chí Minh
+&emsp;**Địa điểm:** Hội trường E - Cơ sở chính Trường Đại học Sài Gòn (273 An Dương Vương, phường Chợ Quán, TP.HCM)
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
